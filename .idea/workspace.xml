@@ -5,8 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b3f30bae-a7bb-48db-ac61-db1c59c0513f" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/_build/dev/lib/cards/.mix/compile.elixir" beforeDir="false" afterPath="$PROJECT_DIR$/_build/dev/lib/cards/.mix/compile.elixir" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_build/dev/lib/cards/ebin/Elixir.Cards.beam" beforeDir="false" afterPath="$PROJECT_DIR$/_build/dev/lib/cards/ebin/Elixir.Cards.beam" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/cards.ex" beforeDir="false" afterPath="$PROJECT_DIR$/lib/cards.ex" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mix.exs" beforeDir="false" afterPath="$PROJECT_DIR$/mix.exs" afterDir="false" />
     </list>
@@ -54,7 +53,7 @@
       <workItem from="1676525800684" duration="43000" />
       <workItem from="1676526066457" duration="107000" />
       <workItem from="1676526220183" duration="646000" />
-      <workItem from="1676978664944" duration="6111000" />
+      <workItem from="1676978664944" duration="7423000" />
     </task>
     <servers />
   </component>

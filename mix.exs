@@ -27,3 +27,13 @@ defmodule Cards.MixProject do
     ]
   end
 end
+
+"""
+  [패키지 설정]
+    - mix.exs 파일의 deps에 패키지를 추가한다.
+    - ex) ex_doc을 사용해 문서화를 편리하게 할 수 있다.
+      - deps: [{:ex_doc, "~> 0.18", only: :dev, runtime: false}]
+      - mix.exs 파일이 있는 폴더에서 mix deps.get을 실행한다.
+      - mix docs를 실행하면 문서화가 된다.
+      - 문서화된 파일은 doc/index.html에서 확인할 수 있다.
+"""
