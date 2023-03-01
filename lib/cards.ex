@@ -1,10 +1,17 @@
 defmodule Cards do
+  @moduledoc """
+    (Cards 모듈이 뭐하는지 설명하는 곳)
+    Provides methods for creating and handling a deck of cards
+  """
 
   def hello do
     "hi there!"
     # return 문을 안써도 마지막 값을 항상 반환한다.
   end
 
+  @doc """
+    Returns a list of strings representing a deck of playing cards
+  """
   def create_deck do
     values = ["Ace", "2", "3", "4", "5", "6", "7", "8", "9", "10", "Jack", "Queen", "King"]
     suits = ["Hearts", "Diamonds", "Clubs", "Spades"]
@@ -29,10 +36,30 @@ defmodule Cards do
     Enum.shuffle(deck)
   end
 
+  @doc """
+    Returns true if the given card is in the deck, false otherwise
+
+  ## Example
+    iex> deck = Cards.create_deck()
+    iex> Cards.contains?(deck, "Ace of Hearts")
+    true
+    iex> Cards.contains?(deck, "Ace of Rabbits")
+    false
+  """
   def contains?(deck, card) do
     Enum.member?(deck, card)
   end
 
+  @doc """
+    Divides a deck into a hand and the remainder of the deck.
+    The `hand_size` argument indicates how many cards should be in the hand.
+
+  ## Example
+    iex> deck = Cards.create_deck()
+    iex> {hand, remainder} = Cards.deal(deck, 5)
+    iex> hand
+    ["Ace of Hearts", "2 of Hearts", "3 of Hearts", "4 of Hearts", "5 of Hearts"]
+  """
   def deal(deck, hand_size) do
     Enum.split(deck, hand_size)
   end
@@ -123,6 +150,15 @@ defmodule Cards do
   8. |> pipe operator
     - 이전의 결과를 첫번째 인자로 받는 함수를 호출할 때 사용한다.
     - ex) create_hand() 의 내용 참고
+
+  9. ex doc
+    - 종류: @moduledoc, @doc
+    - 실행 방법
+      - mix docs
+      - open doc/index.html
+    - doctest: ## Example
+      - '## Example' 을 통해 doc testing 을 할 수 있다.
+      - cards_Test.exs 에 아무 내용이 없어도 'mix test' 를 테스트가 실행되는 것을 볼 수 있다.
 
   """
 end
