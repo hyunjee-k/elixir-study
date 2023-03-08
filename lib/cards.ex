@@ -40,11 +40,15 @@ defmodule Cards do
     Returns true if the given card is in the deck, false otherwise
 
   ## Example
-    iex> deck = Cards.create_deck()
-    iex> Cards.contains?(deck, "Ace of Hearts")
-    true
-    iex> Cards.contains?(deck, "Ace of Rabbits")
-    false
+
+      iex> deck = Cards.create_deck()
+
+      iex> Cards.contains?(deck, "Ace of Hearts")
+      true
+
+      iex> Cards.contains?(deck, "Ace of Rabbits")
+      false
+
   """
   def contains?(deck, card) do
     Enum.member?(deck, card)
@@ -55,10 +59,14 @@ defmodule Cards do
     The `hand_size` argument indicates how many cards should be in the hand.
 
   ## Example
-    iex> deck = Cards.create_deck()
-    iex> {hand, remainder} = Cards.deal(deck, 5)
-    iex> hand
-    ["Ace of Hearts", "2 of Hearts", "3 of Hearts", "4 of Hearts", "5 of Hearts"]
+
+      iex> deck = Cards.create_deck()
+
+      iex> {hand, remainder} = Cards.deal(deck, 5)
+
+      iex> hand
+      ["Ace of Hearts", "2 of Hearts", "3 of Hearts", "4 of Hearts", "5 of Hearts"]
+
   """
   def deal(deck, hand_size) do
     Enum.split(deck, hand_size)
@@ -151,7 +159,7 @@ defmodule Cards do
     - 이전의 결과를 첫번째 인자로 받는 함수를 호출할 때 사용한다.
     - ex) create_hand() 의 내용 참고
 
-  9. ex doc
+  9. ex_doc
     - 종류: @moduledoc, @doc
     - 실행 방법
       - mix docs
