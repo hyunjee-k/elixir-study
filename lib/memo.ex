@@ -13,6 +13,7 @@ defmodule Memo do
       - key는 다양한 타입을 허용한다.
       - pattern matching을 사용할 수 있다. (주어진 값의 부분집합을 사용)
       - key의 순서는 고려하지 않는다.
+      - key의 타입을 지정하지 않으면 atom이 된다.
 
   ## Example
 
@@ -26,6 +27,12 @@ defmodule Memo do
 
       iex> second_color
       "blue"
+
+      iex> %{foo: "bar", hello: "world"}
+      %{foo: "bar", hello: "world"}
+
+      iex> %{foo: "bar", hello: "world"} == %{:foo => "bar", :hello => "world"}
+      true
 
   """
   def map_basic do
