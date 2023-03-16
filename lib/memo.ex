@@ -141,11 +141,7 @@ defmodule Memo do
 
   """
   def struct_example do
-    defmodule User do
-      defstruct name: "John", age: 27
-    end
-
-    %User{}
+    "look at the example"
   end
 
   @doc """
@@ -159,7 +155,7 @@ defmodule Memo do
       iex> true == 1
       false
   """
-  func bool_example do
+  def bool_example do
     false == 0
     true == 1
   end
