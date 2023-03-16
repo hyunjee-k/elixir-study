@@ -116,5 +116,52 @@ defmodule Memo do
 
   end
 
+  @doc """
+
+  ## Memo
+    struct
+      - 기본 값과 다형성을 갖는 map의 확장판이다.
+      - 컴파일 시간에 제공된 필드만 사용할 수 있다. (마지막 예문 참고)
+      - struct는 map이므로 map의 모든 기능을 사용할 수 있다.
+      - 함수를 가질 수 없다. (원시 값만 가질 수 있다.)
+
+  ## Example
+      iex> defmodule User do
+      ...>   defstruct name: "John", age: 27
+      ...> end
+
+      iex> %User{}
+      %User{age: 27, name: "John"}
+
+      iex> is_map(%User{})
+      true
+
+      iex> %User{opps: :field}
+      ** (CompileError) iex:3: unknown key :oops for struct User
+
+  """
+  def struct_example do
+    defmodule User do
+      defstruct name: "John", age: 27
+    end
+
+    %User{}
+  end
+
+  @doc """
+    ## Memo
+     - elixir 에서 false/true 는 0/1과 다르다.
+
+    ## Example
+      iex> false == 0
+      false
+
+      iex> true == 1
+      false
+  """
+  func bool_example do
+    false == 0
+    true == 1
+  end
 
 end
